@@ -1,0 +1,14 @@
+/* Filters out schools in surrounding counties
+ * Used to compare percent of students attending 2- or 4-year college or university
+ * upon graduating high school
+ */
+
+SELECT "COUNTY NAME", "SCHOOL", "GRADUATE COUNT", "PCT COLLEGE BOUND"
+FROM "PA Graduates Public by School 2020-2021"
+WHERE "COUNTY NAME" = 'Dauphin' 
+OR "COUNTY NAME"  = 'Cumberland'
+OR "COUNTY NAME"  = 'Lancaster'
+OR "COUNTY NAME"  = 'York'
+OR "COUNTY NAME"  = 'Perry'
+OR "COUNTY NAME"  = 'Lebanon'
+ORDER BY "COUNTY NAME"
