@@ -12,3 +12,17 @@ OR "COUNTY NAME"  = 'York'
 OR "COUNTY NAME"  = 'Perry'
 OR "COUNTY NAME"  = 'Lebanon'
 ORDER BY "COUNTY NAME"
+
+-------------------------------------------------------------------------------------------------
+
+SELECT "COUNTY NAME", "SCHOOL", "GRADUATE COUNT", "PCT COLLEGE BOUND"
+FROM "PA Graduates Public by School 2020-2021"
+WHERE "COUNTY NAME" = 'Dauphin'
+OR "COUNTY NAME"  = 'Cumberland'
+OR "COUNTY NAME"  = 'Lancaster'
+OR "COUNTY NAME"  = 'York'
+OR "COUNTY NAME"  = 'Perry'
+OR "COUNTY NAME"  = 'Lebanon'
+GROUP BY "COUNTY NAME", "SCHOOL", "GRADUATE COUNT", "PCT COLLEGE BOUND"
+HAVING "PCT COLLEGE BOUND" > 0.7
+ORDER BY "COUNTY NAME"
